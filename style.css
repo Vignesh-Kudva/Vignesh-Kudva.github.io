@@ -77,7 +77,44 @@ header h1 {
 header p {
   margin-top: 10px;
 }
+/* Blog Container */
+.blog-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+}
 
+/* Blog Card */
+.blog-card {
+  width: 250px;
+  text-decoration: none;
+  background: rgba(255, 248, 225, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  color: #4e342e;
+}
+
+/* Image */
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Title */
+.blog-card h3 {
+  padding: 15px;
+  margin: 0;
+}
+
+/* Hover */
+.blog-card:hover {
+  transform: scale(1.05);
+}
 /* ❓ Help Icon */
 .help-icon {
   position: fixed;
