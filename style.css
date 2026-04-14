@@ -1,0 +1,227 @@
+/* ================= RESET ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* ================= SLIDESHOW ================= */
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Overlay */
+.slideshow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 20, 10, 0.5);
+}
+
+/* ================= CONTENT ================= */
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+/* ================= HEADER ================= */
+header {
+  padding: 30px;
+  background: rgba(80, 40, 20, 0.8);
+  color: #fff3e0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 10px;
+}
+
+/* ❓ Help Icon */
+.help-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffcc80;
+  color: #4e342e;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 📞 Help Popup */
+.help-box {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 250px;
+  background: rgba(255, 248, 225, 0.95);
+  color: #4e342e;
+  padding: 15px;
+  border-radius: 15px;
+  display: none;
+  z-index: 2;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Button */
+.help-box button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: #ffcc80;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Each contact block */
+.contact {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d7ccc8;
+}
+
+/* Remove border for last one */
+.contact:last-child {
+  border-bottom: none;
+}
+
+/* Event Banner */
+.event-banner {
+  margin: 50px auto;
+  padding: 40px;
+  width: 80%;
+  background: rgba(255, 248, 225, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.event-banner h2 {
+  margin-bottom: 10px;
+}
+
+/* 📢 Event Bar */
+.event-bar {
+  width: 100%;
+  background: #ffcc80;
+  color: #4e342e;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Scrolling text */
+.event-bar a {
+  display: inline-block;
+  padding: 10px;
+  animation: scrollText 12s linear infinite;
+  text-decoration: none;
+  color: #4e342e;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* ================= CARDS ================= */
+.card {
+  width: 220px;
+  height: 140px;
+  margin: 15px;
+  text-decoration: none;
+  color: #4e342e;
+  background: rgba(255, 248, 225, 0.9);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* Hover */
+.card:hover {
+  transform: scale(1.05);
+  background: #ffe0b2;
+}
+
+.card span {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+animation: zoom 8s infinite;
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(80, 40, 20, 0.8);
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}

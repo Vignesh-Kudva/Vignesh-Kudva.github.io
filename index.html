@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mundkur Kudva Family</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+function toggleHelp() {
+  let box = document.getElementById("helpBox");
+  box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+</script>
+
+<body>
+
+<!-- 🌄 Background Slideshow -->
+<div class="slideshow">
+  <img src="image1.jpeg" class="slide active">
+  <img src="image2.jpeg" class="slide">
+  <img src="image3.jpeg" class="slide">
+</div>
+
+<!-- ❓ Help Icon -->
+<div class="help-icon" onclick="toggleHelp()">❓</div>
+
+<!-- 📞 Help Popup -->
+<div id="helpBox" class="help-box">
+  <h3>Family Contacts</h3>
+
+  <div class="contact">
+    <p><strong>👤 Vignesh Kudva</strong></p>
+    <p>📞 +91 9880941817</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>👤 Vignesh Kudva</strong></p>
+    <p>📞 +91 91234 56789</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>👤  Vignesh Kudva</strong></p>
+    <p>📞 +91 99887 66554</p>
+  </div>
+
+  <button onclick="toggleHelp()">Close</button>
+</div>
+<!-- ✅ Main Content Wrapper -->
+<div class="content">
+
+<!-- 📢 Upcoming Event -->
+<div class="event-bar">
+  <a href="event.html">
+    Upcoming Event: Nemotsava - Click for Details
+  </a>
+</div>
+
+  <!-- 🏠 Header -->
+  <header>
+    <h1>Mundkur Kudva Family</h1>
+    <p>🪔 संस्कार | Tradition | Heritage 🪔</p>
+  </header>
+
+  <!-- 📦 Cards -->
+  <div class="container">
+
+    <a href="history.html" class="card">
+      📜
+      <span>Kudva Family History</span>
+    </a>
+
+    <a href="kuladevata.html" class="card">
+      🐍
+      <span>Kuladevata</span>
+    </a>
+
+    <a href="nagadevata.html" class="card">
+      🐍
+      <span>Nagadevata</span>
+    </a>
+
+    <a href="ganesh.html" class="card">
+      🪔
+      <span>Ganesh Chaturthi</span>
+    </a>
+
+    <a href="familytree.html" class="card">
+      🌳
+      <span>Family Tree</span>
+    </a>
+
+    <a href="dhiava.html" class="card">
+      🏡
+      <span>Dhiava</span>
+    </a>
+
+    <a href="maalu.html" class="card">
+      🌿
+      <span>Maalu</span>
+    </a>
+
+  </div>
+
+  <!-- 🔻 Footer -->
+  <footer>
+    <p>© 2026 Mundkur Kudva Family</p>
+  </footer>
+
+</div>
+
+<!-- ⚡ Slideshow Script -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 5000);
+</script>
+
+</body>
+</html>
