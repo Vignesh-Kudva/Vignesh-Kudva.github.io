@@ -131,14 +131,14 @@ header p {
 }
 
 /* Event Banner */
-.event-banner {
+/*.event-banner {
   margin: 50px auto;
   padding: 40px;
   width: 80%;
   background: rgba(255, 248, 225, 0.9);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
+} */
 .event-banner-img img {
   display: block;
   margin: 20px auto;   /* centers perfectly */
