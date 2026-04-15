@@ -324,6 +324,29 @@ animation: zoom 8s infinite;
   to { transform: scale(1.1); }
 }
 
+/* 📖 Handbook Icon */
+.handbook-icon {
+  position: fixed;
+  top: 20px;
+  right: 70px; /* adjust if help icon also present */
+  z-index: 2;
+}
+
+.handbook-icon a {
+  text-decoration: none;
+  font-size: 26px;
+  background: #ffcc80;
+  padding: 10px 14px;
+  border-radius: 50%;
+  color: #4e342e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Hover */
+.handbook-icon a:hover {
+  transform: scale(1.1);
+}
+
 /* ================= FOOTER ================= */
 footer {
   margin-top: 20px;
